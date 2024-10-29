@@ -4,19 +4,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'npm install' // Si estás usando Node.js
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'npm test' // Si tienes pruebas configuradas
+                sh 'npm test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Aquí colocas los comandos de despliegue
+                // Comando de despliegue
             }
         }
     }
