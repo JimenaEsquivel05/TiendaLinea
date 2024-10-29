@@ -4,19 +4,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'npm install'
+                bat 'npm install'  // Cambiado para Windows
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'npm test'
+                bat 'npm test'     // Cambiado para Windows
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Comando de despliegue
+                // Agrega aquí los comandos de despliegue si es necesario, usando "bat"
             }
         }
     }
