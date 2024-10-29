@@ -3,20 +3,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
-                bat 'npm install'  // Cambiado para Windows
+                bat 'npm install' // Ejecuta npm install en la raíz del repositorio
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing...'
-                bat 'npm test'     // Cambiado para Windows
+                bat 'npm test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Agrega aquí los comandos de despliegue si es necesario, usando "bat"
             }
         }
     }
